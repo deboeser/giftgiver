@@ -16,4 +16,4 @@ jobs:
           name: Run tests
           command: |
             docker-compose up -d
-            docker-compose run client npm run test
+            docker-compose run client npm test -- --coverage -u

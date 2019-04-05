@@ -13,7 +13,7 @@ RUN npm install
 # RUN npm ci --only=production
 
 # Make sure to not run on root user
-RUN useradd -ms /bin/bash admin
+RUN useradd -ms /bin/bash admin && chown admin:admin /usr/src/app
 
 # Bundle app source
 COPY --chown=admin:admin . .
